@@ -7,17 +7,18 @@ https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
 
 # Open up the "foo.txt" file (which already exists) for reading
 # Print all the contents of the file, then close the file
-# Note: pay close attention to your current directory when trying to open "foo.txt"
+# Note: pay close attention to
+# your current directory when trying to open "foo.txt"
 
 # YOUR CODE HERE
 with open('foo.txt') as f:
-    #read_data = f.read()
-    #print(read_data)
+    # read_data = f.read()
+    # print(read_data)
     for line in f:
         print(line, end='')
-    
+
     f.close()
-    
+
 
 # Open up a file called "bar.txt" (which doesn't exist yet) for
 # writing. Write three lines of arbitrary content to that file,
@@ -25,14 +26,13 @@ with open('foo.txt') as f:
 # sure that it contains what you expect it to contain
 
 # YOUR CODE HERE
-with open('bar.txt',"w+") as f:
+with open('bar.txt', "w+") as f:
     for i in range(3):
-         f.write("This is line %d\n" % (i+1))
+        f.write("This is line %d\n" % (i+1))
     f.close()
 
-with open('bar.txt') as f:  
+with open('bar.txt') as f:
     for line in f:
         print(line, end='')
-    
+
     f.close()
-    

@@ -18,12 +18,16 @@ and does the following:
    the format that your program expects arguments to be given.
    Then exit the program.
 
-Note: the user should provide argument input (in the initial call to run the file) and not 
-prompted input. Also, the brackets around year are to denote that the argument is
+Note: the user should provide
+argument input (in the initial call to run the file) and not
+prompted input. Also, the brackets around year
+are to denote that the argument is
 optional, as this is a common convention in documentation.
 
-This would mean that from the command line you would call python3 14_cal.py 4 2015 to 
-print out a calendar for April in 2015, but if you omit either the year or both values, 
+This would mean that from the command
+line you would call python3 14_cal.py 4 2015 to
+print out a calendar for April in 2015, but if you omit
+either the year or both values,
 it should use today’s date to get the month and year.
 """
 
@@ -35,11 +39,11 @@ month = int(sys.argv[1]) if len(sys.argv) > 1 else ''
 year = int(sys.argv[2]) if len(sys.argv) > 2 else ''
 
 if month == '' and year == '':
-  print(calendar.month(datetime.today().year, datetime.today().month))
+    print(calendar.month(datetime.today().year, datetime.today().month))
 if month != '' and month > 0 and month <= 12 and year == '':
-  print(calendar.month(datetime.today().year, int(month)))
+    print(calendar.month(datetime.today().year, int(month)))
 elif month != '' and month > 0 and month <= 12 and year != '':
-  print(calendar.month(int(year), int(month)))
+    print(calendar.month(int(year), int(month)))
 else:
-  print("Please enter valid month and year value example: python cal.py 04 2020")
-  exit()
+    print("Please enter valid month and year value  python cal.py 04 2020")
+    exit()
